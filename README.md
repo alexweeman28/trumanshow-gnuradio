@@ -8,9 +8,9 @@ Two steps are required on Ubuntu 14.04:
 2. Blacklist the kernel module dvb_usb_rtl28xxu:
 
 1. Create the following file: ```/etc/udev/rules.d/20.rtlsdr.rules``` with this rule:
-
+```
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", GROUP="adm", MODE="0666", SYMLINK+="rtl_sdr"
-
+```
 Note that the idVendor and ipProduct values come from the lsusb listing for the device. For example:
 ```
 $ lsusb # Excerpted
