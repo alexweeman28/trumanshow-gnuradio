@@ -3,8 +3,8 @@ Notes on installing and using GNU Radio on Ubuntu 14.04 Desktop using an rtl_sdr
 
 ## Getting the dongle to work
 These following two steps are required on Ubuntu 14.04.
-1. Add a udev rule for the device
 
+1. Add a udev rule for the device
 Create the following file: ```/etc/udev/rules.d/20.rtlsdr.rules``` with this rule:
 ```
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", GROUP="adm", MODE="0666", SYMLINK+="rtl_sdr"
