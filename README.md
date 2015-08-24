@@ -19,7 +19,7 @@ Once this file is created, restart udev:
 ```
 sudo /etc/init.d/udev restart
 ```
-2) Blacklist the kernel module dvb_usb_rtl28xxu 
+2) Blacklist the kernel module ```dvb_usb_rtl28xxu``` 
 
 Add the following line to ```/etc/modprobe.d/blacklist.conf``` and restart the system:
 ```
@@ -27,3 +27,6 @@ blacklist dvb_usb_rtl28xxu
 ``` 
 
 ## Installing GNU Radio
+Several options exist, but the **best** option is to use the provided script for downloading and installing the host of software packages required for gnuradio:
+
+http://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGRFromSource#Using-the-build-gnuradio-script
