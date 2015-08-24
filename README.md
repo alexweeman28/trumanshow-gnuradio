@@ -2,7 +2,8 @@
 Notes on installing and using GNU Radio on Ubuntu 14.04 Desktop using an rtl_sdr dongle
 
 ## Getting the dongle to work
-Two steps are required on Ubuntu 14.04: 
+Two steps are required on Ubuntu 14.04:
+
 1) Add a udev rule for the device
 2) Blacklist the kernel module dvb_usb_rtl28xxu:
 
