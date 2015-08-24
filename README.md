@@ -11,12 +11,12 @@ Two steps are required on Ubuntu 14.04:
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", GROUP="adm", MODE="0666", SYMLINK+="rtl_sdr"
 
 Note that the idVendor and ipProduct values come from the lsusb listing for the device. For example:
-
+```
 $ lsusb # Excerpted
 Bus 002 Device 002: ID 0bda:2838 Realtek Semiconductor Corp.
-
+```
 Once this file is created, restart udev:
-
+```
 sudo /etc/init.d/udev restart
-
+```
 ## Installing GNU Radio
