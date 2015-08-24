@@ -30,3 +30,8 @@ blacklist dvb_usb_rtl28xxu
 Several options exist, but the **best** option is to use the provided script for downloading and installing the host of software packages required for gnuradio. See the details on this page:
 
 http://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGRFromSource#Using-the-build-gnuradio-script
+
+## Testing the system 
+Once the steps above are complete, the system can be tested with the included flow graph: ```fm_radio.grc```
+
+This flow graph can be viewed (and run) in GNU Radio Companion ```gnuradio-companion```, which is the GUI application used to build gnuradio flow graphs. 
