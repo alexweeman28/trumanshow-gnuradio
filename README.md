@@ -31,6 +31,8 @@ Several options exist, but the **best** option is to use the provided script for
 
 http://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGRFromSource#Using-the-build-gnuradio-script
 
+It should be noted that this install will take a **very** long time, as in hours. The build script isn't very talkative, but I've run it twice now on two different systems with a 100% success rate.
+
 ## Testing the system 
 Once the steps above are complete, the system can be tested with the included flow graph: ```fm_radio.grc```
 
