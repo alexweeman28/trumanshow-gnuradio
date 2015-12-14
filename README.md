@@ -42,6 +42,7 @@ This flow graph can be viewed (and run) in GNU Radio Companion ```gnuradio-compa
 Additional software required:
 * lame (MP3 encoder)
 * vlc (all-around awesome FOSS multi-media giant)
+
 Steps:
 1. Create a named pipe with a .wav extension in the same directory where the grc file lives: wmea.wav
 2. In this same directory, start lame, specifying the input and output file names: $ lame wmea.wav wmean.mp3
