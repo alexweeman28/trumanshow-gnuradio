@@ -47,5 +47,6 @@ Steps:
 
 1. Create a named pipe with a ```.wav``` extension in the same directory where the grc file lives: ```wmea.wav```
 2. In this same directory, start lame, specifying the input and output file names: ```$ lame wmea.wav wmea.mp3```
-3. Run the stream_fm_radio.grc flow file.
-4. Start VLC and set up streaming using the wizard: Media->Stream
+3. Run the ```stream_fm_radio.grc``` flow file.
+4. Start VLC and set up streaming using the wizard: Media->Stream. You need to specify the input file, an HTTP stream along with a file name (for the URL) and a port number, as well as the transcoding output profile: Audio MP3.
+
