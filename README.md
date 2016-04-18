@@ -48,5 +48,5 @@ Steps:
 1. Create a named pipe with a ```.wav``` extension in the same directory where the grc file lives: ```$ mkfifo wmea.wav```
 2. In this same directory, start lame, specifying the input and output file names: ```$ lame wmea.wav wmea.mp3```
 3. Run the ```stream_fm_radio.grc``` flow file using the Python script: ```$ python FM_Radio.py```
-4. Start VLC and set up streaming using the wizard: Media->Stream. You need to specify the input file (```wmea.mp3``` from above), an HTTP stream along with a file name (for the URL) and a port number, as well as the transcoding output profile: Audio MP3. This has all been specified in a one-line shell script names run_vlc.sh. Just run this script to start streaming to http://my_ip_address:8080/wbpr.mp3.
+4. Start VLC and set up streaming using the wizard: Media->Stream. You need to specify the input file (```wmea.mp3``` from above), an HTTP stream along with a file name (for the URL) and a port number, as well as the transcoding output profile: Audio MP3. This has all been specified in a one-line shell script named ```run_vlc.sh```. Just run this script to start streaming to http://my_ip_address:8080/wbpr.mp3.
 
