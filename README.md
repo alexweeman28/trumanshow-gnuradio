@@ -1,5 +1,5 @@
 # gnuradio
-Notes on installing and using GNU Radio on *Ubuntu 14.04 Server* using an rtl_sdr dongle
+Notes on installing and using GNU Radio on ***Ubuntu 14.04 Server*** using an rtl_sdr dongle
 
 ## Getting the dongle to work
 The following two steps are required on Ubuntu 14.04.
