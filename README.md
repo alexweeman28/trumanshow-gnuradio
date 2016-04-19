@@ -39,11 +39,13 @@ First, the following additional software packages must be installed:
 
 ```$ sudo apt-get install lame vlc```
 
-Steps:
+Next, create a named pipe with a ```.wav``` extension in the same directory where ```fm_radio.py``` lives. You need to do this just once. The named pipe can be reused every time the SDR's audio signal is streamed.
 
-1. Create a named pipe with a ```.wav``` extension in the same directory where ```fm_radio.py``` lives: ```$ mkfifo wmea.wav```
-2. In this same directory, start lame, specifying the input and output file names: ```$ lame wmea.wav wmea.mp3```
-3. Run the Python script: ```$ python fm_radio.py```
-4. Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```. 
-5. Point a browser running on a different host to http://my_ip_address:8080/wbpr.mp3, and enjoy!
+```$ mkfifo wmea.wav```
+
+Finally, 
+1. In the same directory where the SDR's Python script and the named pipe live, start lame, specifying the input and output file names: ```$ lame wmea.wav wmea.mp3```
+2. Run the Python script: ```$ python fm_radio.py```
+3. Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```: ```$ ./run_vlc.sh``` 
+4. Point a browser running on a different host to http://my_ip_address:8080/wbpr.mp3, and enjoy!
 
