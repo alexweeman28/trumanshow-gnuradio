@@ -26,17 +26,11 @@ Add the following line to ```/etc/modprobe.d/blacklist.conf``` and restart the s
 blacklist dvb_usb_rtl28xxu
 ``` 
 
-## Installing GNU Radio
-Several options exist, but the **best** option is to use the provided script for downloading and installing the host of software packages required for gnuradio. See the details on this page:
+## Installing GNU Radio 
+Install the ```gnuradio``` and ```gr-osmosdr``` packages using apt: ```$ sudo apt-get install gnuradio gr-osmosdr```
 
-http://gnuradio.org/redmine/projects/gnuradio/wiki/InstallingGRFromSource#Using-the-build-gnuradio-script
-
-It should be noted that this install will take a **very** long time, as in hours. The build script isn't very talkative, so lots patience and a bit of faith are required. Or, you can do what I did and follow what's happening by running top in another terminal window. I've run it twice now on two different systems with a 100% success rate.
-
-## Testing the system 
-Once the steps above are complete, the system can be tested with the included flow graph: ```fm_radio.grc```
-
-This flow graph can be viewed (and run) in GNU Radio Companion ```gnuradio-companion```, which is the GUI application used to build gnuradio flow graphs. 
+## Testing the SDR 
+Once the above steps are complete, the system can be tested with the included Python 2 script: ```fm_radio.py```
 
 ## Streaming the Radio Signal
 Additional software required:
@@ -45,8 +39,9 @@ Additional software required:
 
 Steps:
 
-1. Create a named pipe with a ```.wav``` extension in the same directory where the grc file lives: ```$ mkfifo wmea.wav```
+1. Create a named pipe with a ```.wav``` extension in the same directory where ```fm_radio.py``` lives: ```$ mkfifo wmea.wav```
 2. In this same directory, start lame, specifying the input and output file names: ```$ lame wmea.wav wmea.mp3```
-3. Run the ```stream_fm_radio.grc``` flow file using the Python script: ```$ python FM_Radio.py```
-4. Start VLC and set up streaming using the wizard: Media->Stream. You need to specify the input file (```wmea.mp3``` from above), an HTTP stream along with a file name (for the URL) and a port number, as well as the transcoding output profile: Audio MP3. This has all been specified in a one-line shell script named ```run_vlc.sh```. Just run this script to start streaming to http://my_ip_address:8080/wbpr.mp3.
+3. Run the Python script: ```$ python fm_radio.py```
+4. Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```. 
+5. Point a browser running on a different host to http://my_ip_address:8080/wbpr.mp3, and enjoy!
 
