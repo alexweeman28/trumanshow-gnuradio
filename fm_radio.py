@@ -67,7 +67,7 @@ class FM_Radio(gr.top_block):
         )
         self.low_pass_filter_0 = filter.fir_filter_ccf(1, firdes.low_pass(
         	1, samp_rate, cutoff, transition, firdes.WIN_HAMMING, 6.76))
-        self.blocks_wavfile_sink_0 = blocks.wavfile_sink("/home/jim/trumanshow/gnuradio/wmea.wav", 1, 48000, 8)
+        self.blocks_wavfile_sink_0 = blocks.wavfile_sink("wmea.wav", 1, 48000, 8)
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vff((volume, ))
         self.analog_wfm_rcv_0 = analog.wfm_rcv(
         	quad_rate=quadrature,
