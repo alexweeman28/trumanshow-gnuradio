@@ -36,7 +36,9 @@ Once the above steps are complete, the system can be tested with the included Py
 First, the following additional software packages must be installed:
 * lame (MP3 encoder)
 * vlc (all-around awesome FOSS multi-media giant)
+
 ```$ sudo apt-get install lame vlc```
+
 Steps:
 
 1. Create a named pipe with a ```.wav``` extension in the same directory where ```fm_radio.py``` lives: ```$ mkfifo wmea.wav```
