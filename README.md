@@ -30,7 +30,7 @@ blacklist dvb_usb_rtl28xxu
 Install the ```gnuradio``` and ```gr-osmosdr``` packages using apt: ```$ sudo apt-get install gnuradio gr-osmosdr```
 
 ## Testing the SDR 
-Once the above steps are complete, the system can be tested with the included Python 2 script: ```fm_radio.py```
+Once the above steps are complete, the system can be tested with the included Python 2 script: ```$ python fm_radio.py```
 
 ## Streaming the Radio Signal
 Additional software required:
