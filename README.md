@@ -50,4 +50,4 @@ Finally,
 3. Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```: ```$ ./run_vlc.sh``` 
 4. Point a browser running on a different host to http://my_ip_address:8080/wbpr.mp3, and enjoy!
 
-Note: 
+Note: The audio output produced by the SDR and encoded by ```lame``` is actually stored in ```wmea.mp3``` so that it can be streamed by vlc. Depending on how long streaming continues, this file can grow quite large. Just something to keep in mind.
