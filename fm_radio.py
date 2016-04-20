@@ -15,7 +15,7 @@ from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
 from optparse import OptionParser
 import osmosdr
-import time
+import time, argparse
 
 
 class FM_Radio(gr.top_block):
@@ -132,8 +132,8 @@ class FM_Radio(gr.top_block):
         self.audio_dec = audio_dec
 
 
-def main(top_block_cls=FM_Radio, options=None):
-    freq = 102.1
+def main(freq, top_block_cls=FM_Radio, options=None):
+    #freq = 102.1
     tb = top_block_cls(freq)
     tb.start()
     try:
@@ -145,4 +145,9 @@ def main(top_block_cls=FM_Radio, options=None):
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description='Stream an FM radio station')
+    parser.add_argument('freq', type=float, default=90.1, nargs='?',
+                        help='The FM radio frequency (default: %(default)s)')
+    args = parser.parse_args()
+    print(args.freq)
+    main(args.freq)
