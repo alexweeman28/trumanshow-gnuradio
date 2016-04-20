@@ -149,5 +149,4 @@ if __name__ == '__main__':
     parser.add_argument('freq', type=float, default=90.1, nargs='?',
                         help='The FM radio frequency (default: %(default)s)')
     args = parser.parse_args()
-    print(args.freq)
     main(args.freq)
