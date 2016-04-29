@@ -27,7 +27,11 @@ blacklist dvb_usb_rtl28xxu
 ``` 
 
 ## Installing GNU Radio 
-Install the ```gnuradio``` and ```gr-osmosdr``` packages using apt: ```$ sudo apt-get install gnuradio gr-osmosdr```
+Install the ```gnuradio``` and ```gr-osmosdr``` packages using apt: ```$ sudo apt-get install gnuradio gr-osmosdr```.
+In Carl Laufer's *The Hobbyist's Guide to the RTL-SDR*, he suggests a modification to a gnuradio config file for instances running in Linux VMs to prevent "choppy audio." Specifically, in the file ```/usr/gnuradio/conf.d/gr-audio-alsa.conf``` he suggests the following settings.
+
+'''period_time = 0.10
+nperiods = 32'''
 
 ## Testing the SDR 
 Once the above steps are complete, the system can be tested with the included Python 2 script: ```$ python fm_radio.py```
