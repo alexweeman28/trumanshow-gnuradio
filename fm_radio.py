@@ -33,10 +33,7 @@ class FM_Radio(gr.top_block):
         self.cutoff = cutoff = 100e3
         self.audio_dec_0 = audio_dec_0 = 10
         self.audio_dec = audio_dec = 10
-        if freq == None:
-            self.freq = 104.1
-        else:
-            self.freq = freq
+        self.freq = freq
         ##################################################
         # Blocks
         ##################################################
