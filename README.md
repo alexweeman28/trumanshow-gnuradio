@@ -31,6 +31,7 @@ Install the ```gnuradio``` and ```gr-osmosdr``` packages using apt: ```$ sudo ap
 In Carl Laufer's *The Hobbyist's Guide to the RTL-SDR*, he suggests a modification to a gnuradio config file for instances running in Linux VMs to prevent "choppy audio." Specifically, in the file ```/usr/gnuradio/conf.d/gr-audio-alsa.conf``` he suggests the following settings.
 
 ```period_time = 0.10
+
 nperiods = 32```
 
 ## Testing the SDR 
