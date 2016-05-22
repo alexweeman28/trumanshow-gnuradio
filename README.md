@@ -78,18 +78,20 @@ First, create a named pipe with a ```.wav``` extension in the same directory whe
 
 ### Streaming the Radio Signal
 
-1) In the same directory where the SDR's Python script and the named pipe live, start lame, specifying the input and output file names: 
+1) In the same directory where the SDR's Python script and the named pipe live, start lame, specifying the input and output file names. This command will block until it receives audio input to encode, at which point it will begin displaying summary statistics on its activity, which continues until the audio input ceases. If you run this command in the background, you can run the fm_radio.py script in the same bash session.
 
-```$ lame wmea.wav wmea.mp3```
+```$ lame wmea.wav wmea.mp3 &```
 
-2) Run the Python script: 
+2) Now, in the same bash session, run the fm_radio.py script. Once the script completes initializes and begins generating audio output, the lame encoding summary statistics will display.
 
 ```$ python fm_radio.py```
 
-3) Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```:
+3) In a separate bash session, start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```:
 
 ```$ ./run_vlc.sh``` 
 
 4) Point a browser running on a different host to http://my_ip_address:8080/wbpr.mp3, and enjoy!
 
 *Note:* The audio output produced by the SDR and encoded by ```lame``` is actually stored in ```wmea.mp3``` so that it can be streamed by vlc. Depending on how long streaming continues, this file can grow quite large. Just something to keep in mind.
+
+*Note:* To stop the fm_radio.py script from capturing audio, simply press Ctrl-c in the first bash session described above. As described above, lame will quit on its own when the input to wmea.wav is interrupted. It will however be necessary to kill vlc in the second window.
