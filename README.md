@@ -4,7 +4,7 @@ Scripts for capturing audio from an FM radio station using an rtl_sdr dongle and
 ##Files##
 **README.md:** This file
 
-**fm_radio.grc:** The gnuradio flow diagram used to generate fm_radio.py, created in the gnuradio-companion GUI.
+**fm_radio.grc:** The gnuradio flow diagram used to generate fm_radio.py, created in gnuradio-companion.
 
 **fm_radio.py:** The script used to capture audio output from an FM radio station, generated from fm_radio.grc. By default, the script tunes to the frequency 90.1 MHz. A different frequency can be specified at the command line when running the script:
 
