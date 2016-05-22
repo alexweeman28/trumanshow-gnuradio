@@ -48,9 +48,9 @@ blacklist dvb_usb_rtl28xxu
 ### Installing GNU Radio 
 Install the ```gnuradio``` and ```gr-osmosdr``` packages using APT: 
 
-```$ sudo apt-get install gnuradio gr-osmosdr```.
+```$ sudo apt-get install gnuradio gr-osmosdr```
 
-*Note:* In Carl Laufer's *The Hobbyist's Guide to the RTL-SDR*, he suggests a modification to a gnuradio config file for instances running in Linux VMs to prevent "choppy audio." Specifically, in the file ```/usr/gnuradio/conf.d/gr-audio-alsa.conf``` he suggests the following settings.
+*Note:* In Carl Laufer's *The Hobbyist's Guide to the RTL-SDR*, he suggests a modification to a gnuradio config file for instances running in Linux VMs to prevent "choppy audio." Specifically, in the file ```/usr/gnuradio/conf.d/gr-audio-alsa.conf``` he suggests the following settings in place of the defaults:
 
 ```
 period_time = 0.10
@@ -78,9 +78,18 @@ First, create a named pipe with a ```.wav``` extension in the same directory whe
 
 ### Streaming the Radio Signal
 
-1) In the same directory where the SDR's Python script and the named pipe live, start lame, specifying the input and output file names: ```$ lame wmea.wav wmea.mp3```
-2) Run the Python script: ```$ python fm_radio.py```
-3) Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```: ```$ ./run_vlc.sh``` 
+1) In the same directory where the SDR's Python script and the named pipe live, start lame, specifying the input and output file names: 
+
+```$ lame wmea.wav wmea.mp3```
+
+2) Run the Python script: 
+
+```$ python fm_radio.py```
+
+3) Start streaming the SDR's audio output by running the included one-line shell script named ```run_vlc.sh```:
+
+```$ ./run_vlc.sh``` 
+
 4) Point a browser running on a different host to http://my_ip_address:8080/wbpr.mp3, and enjoy!
 
 *Note:* The audio output produced by the SDR and encoded by ```lame``` is actually stored in ```wmea.mp3``` so that it can be streamed by vlc. Depending on how long streaming continues, this file can grow quite large. Just something to keep in mind.
