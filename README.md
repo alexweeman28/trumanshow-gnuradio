@@ -1,5 +1,16 @@
-# gnuradio
-Notes on installing, running and streaming the audio output from an SDR and GNU Radio on **Ubuntu 14.04 Server** using an rtl_sdr dongle.
+# trumanshow-gnuradio
+Scripts for capturing audio from an FM radio station using an rtl_sdr dongle and gnuradio and streaming the audio over a network using lame and vlc.
+
+##Files##
+**README.md:** This file
+
+**fm_radio.grc:** The gnuradio flow diagram used to generate fm_radio.py, created in the gnuradio-companion GUI.
+
+**fm_radio.py:** The script used to capture audio output from an FM radio station, generated from fm_radio.grc. By default, the script tunes to the frequency 90.1 Mhz. A different frequency can be specified at the command line when running the script:
+
+```python fm_radio.py 102.1```
+
+Run the script with the -h option for details.
 
 ## Getting the dongle to work
 The following two steps are required on Ubuntu 14.04.
