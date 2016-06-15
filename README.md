@@ -1,4 +1,4 @@
-# gnuradio
+# trumanshow-gnuradio
 Notes on installing and using GNU Radio on Ubuntu 14.04 Desktop using an rtl_sdr dongle
 
 ## Getting the dongle to work
