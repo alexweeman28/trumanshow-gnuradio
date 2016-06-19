@@ -1,5 +1,5 @@
 # trumanshow-gnuradio
-Scripts for capturing audio from an FM radio station using an rtl_sdr dongle and the Open Source gnuradio package, and streaming the audio over a network using the Open Source packages lame and vlc.
+Scripts for capturing audio from FM radio stations using an RTL_SDR dongle and the Open Source gnuradio package, and streaming the audio over a network using the Open Source packages LAME and VLC.
 
 ##Files##
 **README.md:** This file
